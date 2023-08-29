@@ -5,7 +5,6 @@ import { SunIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
 import clsx from "clsx";
 
-
 export default function OpenWeather() { 
     const [cityData, setCityData] = useState(null);
     const [cityName, setCityName] = useState('');
@@ -13,7 +12,7 @@ export default function OpenWeather() {
     const [hasError, setHasError] = useState(false);
 
     const API_KEY = import.meta.env.VITE_API_KEY;
-    const apiURL = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${API_KEY}`;
+    const apiURL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${API_KEY}`;
 
     const fetchCityData = async () => {
         setLoading(true);
