@@ -5,6 +5,7 @@ import { FadeIn } from './components/FadeIn';
 import { ArrowPathRoundedSquareIcon } from '@heroicons/react/24/solid';
 import { useState } from 'react';
 import clsx from 'clsx';
+import OpenWeather from './components/examples/OpenWeather';
 
 function FetchExample() {
     const [loading, setLoading] = useState(false);
@@ -44,12 +45,12 @@ function FetchExample() {
                                 <div className="sm:flex sm:items-center sm:gap-x-6 lg:block">
                                     <ArrowPathRoundedSquareIcon className="h-12 w-12 flex-none text-neutral-950" />
                                     <h3 className="mt-6 flex items-center text-sm font-semibold text-neutral-950 sm:mt-0 lg:mt-8">
-                                        Fetch API
+                                        JSON Placeholder API
                                     </h3>
                                 </div>
                                 <div className="mt-1 flex gap-x-4 sm:mt-0 lg:block">
                                     <p className="text-sm tracking-tight text-neutral-950 after:ml-4 after:font-semibold after:text-neutral-300 after:content-['/'] lg:mt-2 lg:after:hidden">
-                                        JSON Placeholder API
+                                        Free fake API for testing and prototyping
                                     </p>
                                 </div>
                             </div>
@@ -133,7 +134,7 @@ export default function App() {
     return (
         <>
             <PageIntro
-                eyebrow="Fetch API Objects"
+                eyebrow="Fetch API"
                 title="Working with web standards"
             >
                 <p>
@@ -146,6 +147,7 @@ export default function App() {
             </PageIntro>
 
             <FetchExample />
+            <OpenWeather />
             <Footer />
         </>
     );
