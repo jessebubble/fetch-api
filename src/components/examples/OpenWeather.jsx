@@ -9,7 +9,6 @@ export default function OpenWeather() {
     const [cityData, setCityData] = useState(null);
     const [cityName, setCityName] = useState('');
     const [loading, setLoading] = useState(false);
-    const [hasError, setHasError] = useState(false);
 
     const API_KEY = import.meta.env.VITE_API_KEY;
     const apiURL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${API_KEY}`;
@@ -22,7 +21,6 @@ export default function OpenWeather() {
             setCityData(data);
             setLoading(false);
         } catch (error) {
-            setHasError(true);
             setLoading(false);
         }
     }
