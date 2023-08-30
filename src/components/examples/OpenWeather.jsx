@@ -10,7 +10,7 @@ export default function OpenWeather() {
     const [cityName, setCityName] = useState('');
     const [loading, setLoading] = useState(false);
 
-    const API_KEY = import.meta.env.VITE_API_KEY;
+    const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
     const apiURL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${API_KEY}`;
 
     const fetchCityData = async () => {
