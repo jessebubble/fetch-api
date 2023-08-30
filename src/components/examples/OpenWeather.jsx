@@ -78,7 +78,7 @@ export default function OpenWeather() {
                                                 onClick={handleSubmit}
                                                 className={clsx(
                                                     "flex items-center justify-center rounded-lg bg-neutral-950 text-white p-2",
-                                                    "hover:bg-centro-blue/90 transition-colors duration-200 ease-in-out",
+                                                    "hover:bg-centro-blue transition-colors duration-200 ease-in-out",
                                                     "focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-950",
                                                     "disabled:opacity-50 disabled:cursor-not-allowed",
                                                     { "opacity-50 cursor-not-allowed": loading }
